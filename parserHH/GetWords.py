@@ -42,7 +42,7 @@ def getDict(vacsHrefs):
     vacsLen = len(vacsHrefs)
     for i in vacsHrefs:
         textSet = parse(i)
-        print(str(counter*100/vacsLen), end="% \t--- ")
+        print(str(counter*100/vacsLen)[:5], end="% \t\t--- ")
         counter+=1
         for j in textSet:
             print("parsing: " + i)

@@ -9,7 +9,7 @@ import WriteInFile
 def main():
     prop = GetProperty.getProperty("cfg/config.properties")
     vacancyPages = VacsHrefs.getVacshHref(prop)
-    print("vacancies hrefs was gotten")
+    print("vacancies hrefs was gotten №" + str(len(vacancyPages)))
     allDict = GetWords.getDict(vacancyPages)
     result = dict()
     for i in allDict:

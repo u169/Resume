@@ -13,7 +13,7 @@ def href_getter(soup_list):
     result = list()
     while len(soup_list) != 0:
         href = str(soup_list.pop())
-        href = re.findall(r'(\bhttps://.+er).+target', href)
+        href = re.findall(r'(\bhttps://.+)\?.+target', href)
         result.extend(href)
     return result
 
@@ -34,11 +34,10 @@ def getVacshHref(prop):
     for i in range(pages):
         url = prop["templ"] + "&text=" + prop["vacancy"] + "&page=" + str(i)
         print(str(i+1)+ "'nd page: ", end = "")
-        try:
-            vacsHrefs.extend(parse(url))
-            print(url)
-        except:
-            print("Can't parse: " + url)
+        x = parse(url)
+        print(url + ": " + str(len(x)) + " vacs")
+        vacsHrefs.extend(x)
+        if len(x) < 20:
             break
     print()
     return vacsHrefs
