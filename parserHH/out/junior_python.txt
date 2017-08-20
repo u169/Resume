@@ -1,0 +1,9 @@
+junior_python
+Python : 33
+SQL : 24
+Linux : 19
+Data : 14
+Java : 12
+Windows : 11
+Server : 8
+Excel : 7

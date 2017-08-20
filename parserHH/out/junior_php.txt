@@ -1,0 +1,16 @@
+junior_php
+PHP : 36
+JavaScript : 18
+CSS : 15
+HTML : 15
+MySQL : 13
+API : 13
+CMS : 10
+ООП : 10
+России : 8
+SQL : 8
+1С-Битрикс : 8
+REST : 7
+Java : 7
+Для : 6
+PostgreSQL : 6

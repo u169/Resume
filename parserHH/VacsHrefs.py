@@ -30,14 +30,14 @@ def getVacshHref(prop):
     pages = value // 20
     if  value % 20 > 0:
         pages+=1
-    print(str(pages) + "...")
+    print(str(pages) + " pages will be parsing:")
     for i in range(pages):
         url = prop["templ"] + "&text=" + prop["vacancy"] + "&page=" + str(i)
-        print(str(i+1)+ "'nd page: ", end = "")
+        print("\t" + str(i+1) + " of " + str(pages) + " page: ", end = "")
         x = parse(url)
         print(url + ": " + str(len(x)) + " vacs")
         vacsHrefs.extend(x)
         if len(x) < 20:
+            print("no more vacancies")
             break
-    print()
     return vacsHrefs
